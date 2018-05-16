@@ -1,0 +1,9 @@
+name: 'demo-multibranch-scriptpath'
+project-type: multibranch-defaults
+script-path: subfolder/Jenkinsfile
+scm:
+    - github:
+        repo: 'foo'
+        repo-owner: 'johndoe'
+        credentials-id: 'secret'
+

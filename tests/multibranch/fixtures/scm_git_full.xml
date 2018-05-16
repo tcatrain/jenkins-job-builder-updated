@@ -36,7 +36,19 @@
           <remote>https://example.com/jonhndoe/keep-frontend.git</remote>
           <credentialsId>secret</credentialsId>
           <traits>
+            <jenkins.plugins.git.traits.BranchDiscoveryTrait/>
             <jenkins.plugins.git.traits.IgnoreOnPushNotificationTrait/>
+            <jenkins.plugins.git.traits.CleanBeforeCheckoutTrait>
+              <extension class="hudson.plugins.git.extensions.impl.CleanBeforeCheckout"/>
+            </jenkins.plugins.git.traits.CleanBeforeCheckoutTrait>
+            <jenkins.plugins.git.traits.CleanAfterCheckoutTrait>
+              <extension class="hudson.plugins.git.extensions.impl.CleanCheckout"/>
+            </jenkins.plugins.git.traits.CleanAfterCheckoutTrait>
+            <jenkins.plugins.git.traits.LocalBranchTrait>
+              <extension class="hudson.plugins.git.extensions.impl.LocalBranch">
+                <localBranch>**</localBranch>
+              </extension>
+            </jenkins.plugins.git.traits.LocalBranchTrait>
           </traits>
         </source>
       </jenkins.branch.BranchSource>

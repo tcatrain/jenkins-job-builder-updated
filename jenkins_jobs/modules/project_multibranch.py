@@ -55,6 +55,14 @@ Plugins required:
       (default '-1, all')
     * **days-to-keep** (`int`): For how many days should a build be kept.
       (default '-1, forever')
+    * **script-path** (`str`): Location of the Jenkinsfile inside the
+      repository to build
+    * **blueocean-plugin** (`dict`): Blueocean plugin configuration section
+        * **user** (`str`): How is the user account accessing Blueocean
+          credentials provider
+        * **id** (`str`): What is the identifier of the credentials provider
+          to be referenced later on in the configuration
+        * **domain-name** (`str`): What is the name of the credential provider
 
 Job examples:
 
@@ -431,6 +439,12 @@ def git_scm(xml_parent, data):
         (default true)
     :arg bool ignore-on-push-notifications: If a job should not trigger upon
         push notifications. (default false)
+    :arg bool clean-before-checkout: Clean the local workspace before checking
+        out the repository (default false)
+    :arg bool clean-after-checkout: Clean the local workspace after checking
+        out the repository (default false)
+    :arg str local-branch: How the local branch are intitled when checkouted
+        (default: '')
 
     Minimal Example:
 

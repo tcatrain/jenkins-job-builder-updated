@@ -1,0 +1,12 @@
+name: 'demo-multibranch-blueocean'
+project-type: multibranch-defaults
+blueocean-plugin:
+    user: blueocean-user 
+    id: blueocean-id
+    domain-name: blueocean-domain
+scm:
+    - github:
+        repo: 'foo'
+        repo-owner: 'johndoe'
+        credentials-id: 'secret'
+

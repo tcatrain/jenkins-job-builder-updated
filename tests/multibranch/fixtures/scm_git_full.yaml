@@ -4,5 +4,8 @@ scm:
     - git:
         url: 'https://example.com/jonhndoe/keep-frontend.git'
         credentials-id: secret
-        discover-branches: false
+        discover-branches: true
+        clean-before-checkout: true
+        clean-after-checkout: true
         ignore-on-push-notifications: true
+        local-branch: '**'
